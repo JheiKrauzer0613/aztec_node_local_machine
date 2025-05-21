@@ -1,7 +1,8 @@
 # aztec_node_local_machine
 Guide on how to set-up and run aztec node using local computer if behind NAT/CGNAT network via reverse tunnel method.
 
-# IMPORTANT: Understanding about NAT / CGNAT network<br /><br />
+# IMPORTANT: Understanding about NAT / CGNAT network
+**PLEASE MAKE SOME TIME TO READ AND UNDERSTAND. YOU CANNOT FIX A PROBLEM IF YOU DON'T KNOW WHAT THE PROBLEM IS IN THE FIRST PLACE.**<br /><br />
 # What is NAT (Network Address Translation)?
 **NAT (Network Address Translation)** is a common networking setup where your router allows multiple devices in your home or office to share a single public IP address to access the internet. This means your computer running an Aztec node has a private IP address that isn’t directly visible from the internet, which can prevent other nodes from connecting to it.
 
@@ -45,8 +46,6 @@ If your local IP is a private IP and is different from your public IP, then you 
 
 This means that **even if you set up port forwarding on your own router, incoming connections may still be blocked at the ISP level** because you're not directly exposed to the public internet.
 
-CGNAT is commonly used for home or mobile internet users, especially when IPv4 addresses are limited.
-
 ---
 
 ## Why CGNAT Matters for Running a Node
@@ -59,7 +58,7 @@ If you're behind CGNAT, other nodes **cannot directly connect to your Aztec node
 
 ### 1. Check your router’s **WAN IP address**:
 
-- Log in to your router’s admin interface (usually at `192.168.1.1`, `192.168.0.1`, or `router.asus.com`, etc.).
+- Log in to your router’s admin dashboard.
 - Look for the **WAN IP** or **Internet IP** — this is the address your ISP assigns to your router.
 
 ### 2. Compare it to your public IP address:
@@ -80,8 +79,8 @@ If you're behind CGNAT, other nodes **cannot directly connect to your Aztec node
 
 ## What to Do If You're Behind NAT / CGNAT
 
-- **Contact your ISP** and ask if they can assign you a **public static IP address** (may require a business plan or small monthly fee).
-- Alternatively, consider using a **reverse tunnel or relay server** to bypass CGNAT and allow inbound connections. **-- which I will guide you to set up.**
+- **Contact your ISP** and ask if they can assign you a **public static IP address** (may require a business plan or monthly fee).
+- Alternatively, consider using a **reverse tunnel or relay server** to bypass NAT / CGNAT and allow inbound connections. **-- which I will guide you to set up.**
 
 
 
